@@ -5,7 +5,6 @@ import { LoginPage } from "src/pages/LoginPage/LoginPage";
 import { Main1} from "src/pages/MyPage/MyPage";
 import { CreatePage} from "./pages/CreatePage/CreatePage";
 
-
 function App() {
   return (
     <Routes>

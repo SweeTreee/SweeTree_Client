@@ -8,8 +8,10 @@ import googleLogo from "src/assets/Button/Google.svg";
 import naverLogo from "src/assets/Button/Naver.svg";
 
 import { SOCIAL_PROVIDER } from "src/constants/SocialProviders";
+import { useSocialLogin } from "../../hooks/useSocialLogin";
 
 export const LoginPage = () => {
+  const { handleGoogleLogin } = useSocialLogin();
   return (
     <Background>
       <S.LogoPos>
@@ -20,18 +22,21 @@ export const LoginPage = () => {
         logo={kakaoLogo}
         color={"#FEE500"}
         textColor={"#000"}
+        handleSocialLogin={handleGoogleLogin}
       />
       <SocialLoginButton
         provider={SOCIAL_PROVIDER.GOOGLE}
         logo={googleLogo}
         color={"#FFF"}
         textColor={"#0000008A"}
+        handleSocialLogin={handleGoogleLogin}
       />
       <SocialLoginButton
         provider={SOCIAL_PROVIDER.NAVER}
         logo={naverLogo}
         color={"#03C75A"}
         textColor={"#FFF"}
+        handleSocialLogin={handleGoogleLogin}
       />
     </Background>
   );
