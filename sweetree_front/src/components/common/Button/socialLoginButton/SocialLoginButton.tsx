@@ -6,13 +6,17 @@ interface socialLoginButtonProps {
   logo: string;
   color: string;
   textColor: string;
+  handleSocialLogin: () => void;
 }
 
 export const SocialLoginButton = (props: socialLoginButtonProps) => {
   return (
     <S.SocialLoginButtonWrapper>
       <S.SocialLoginButtonStyled as="button" color={props.color}>
-        <S.SocialLoginButtonContentStyled color={props.textColor}>
+        <S.SocialLoginButtonContentStyled
+          color={props.textColor}
+          onClick={props.handleSocialLogin}
+        >
           <img src={props.logo} alt={props.provider} />
           Log in with {props.provider}
         </S.SocialLoginButtonContentStyled>

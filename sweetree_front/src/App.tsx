@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import { LoginPage } from "src/pages/LoginPage/LoginPage";
 import { Main1Page } from "src/pages/Main1Page/Main1Page";
 
-
 function App() {
   return (
     <Routes>
